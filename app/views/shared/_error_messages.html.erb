@@ -1,0 +1,13 @@
+<% if @category.errors.any? %>
+  <div id="error_explanation">
+    <div class="alert alert-danger">
+      <% t "views.shared._error_messages.content_error" %> 
+      <%= pluralize @category.errors.count, "error" %>.
+    </div>
+    <ul>
+      <% @category.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

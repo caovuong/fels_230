@@ -1,5 +1,10 @@
 en:
   views:
+    categories:
+      new: "Create category"
+    shared: 
+      _error_messages:
+        content_error: "The form contains"
     layouts:
       header:
         home: "Home"
@@ -13,6 +18,12 @@ en:
         signup: "Sign up now!"
         welcom_system: "Welcome to the Framgia E-Learning System"
         content: "This is the home page for the Framgia E-Learning System."
+    
   helpers:
     application_helper: 
       title: "Framgia E-Learning System"
+      
+  controllers:
+    categories_controller:
+      create_success: "Create success"
+      add_category: "Add Category"
