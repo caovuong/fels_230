@@ -2,6 +2,12 @@ en:
   views:
     categories:
       new: "Create category"
+      index: 
+        list_category: "List categories"
+        start_lesson: "Start lesson"
+        edit: "Edit"
+        delete: "Delete"
+        flash_message_delete_category: "You sure?"
     shared: 
       _error_messages:
         content_error: "The form contains"
