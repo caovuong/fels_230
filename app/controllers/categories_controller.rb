@@ -3,6 +3,10 @@ class CategoriesController < ApplicationController
     @category = Category.new
   end
 
+  def index
+    @category = Category.paginate page: params[:page], per_page: 10
+  end
+  
   def create
     @category = Category.new category_params
     if @category.save

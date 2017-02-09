@@ -2,6 +2,9 @@ en:
   views:
     categories:
       new: "Create category"
+      index: 
+        list_category: "List categories"
+        start_lesson: "Start lesson"
     shared: 
       _error_messages:
         content_error: "The form contains"
