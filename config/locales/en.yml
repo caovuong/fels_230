@@ -13,6 +13,10 @@ en:
         home: "Home"
         help: "Help"
         linklogin: "Log in"
+        user: "Users"
+        profile: "Profile"
+        settings: "Settings"
+        logout: "Log out"
       footer:
         about: "About"
         contact: "Contact"
@@ -21,7 +25,9 @@ en:
         signup: "Sign up now!"
         welcom_system: "Welcome to the Framgia E-Learning System"
         content: "This is the home page for the Framgia E-Learning System."
-    
+        error_msg: "error"
+        create_account: "Create my account"
+
   helpers:
     application_helper: 
       title: "Framgia E-Learning System"
@@ -30,3 +36,7 @@ en:
     categories_controller:
       create_success: "Create success"
       add_category: "Add Category"
+  error:
+    user: "Couldn't find this user. Please try again!"
+  info:
+    email: "Please check your email to activate your account."
