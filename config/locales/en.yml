@@ -17,6 +17,8 @@ en:
         profile: "Profile"
         settings: "Settings"
         logout: "Log out"
+        categories: "Categories"
+        word_list: "Wordlist"
       footer:
         about: "About"
         contact: "Contact"
@@ -31,12 +33,28 @@ en:
   helpers:
     application_helper: 
       title: "Framgia E-Learning System"
-      
+  
+  user:
+    title: "Users All"
+    new_user: "New user?"
+    remember: "Remember me on this computer"
+    edit_title: "Edit user"
+    edit_user: "Update your profile"
+    save_change: "Save changes" 
+    acount: "Welcome to the Framgia E-Learning System! Click on the link 
+      below to activate your account:"
+  admin:
+    title: "Admin"
   controllers:
     categories_controller:
       create_success: "Create success"
       add_category: "Add Category"
   error:
     user: "Couldn't find this user. Please try again!"
+    session: "Invalid email/password combination"
+    email: "Account not activated.Check your email for the activation link."
+    update_suc: "Profile updated"
+    updated_er: "Update Failed"
+    destroy_user: "Deleted User"
   info:
     email: "Please check your email to activate your account."
