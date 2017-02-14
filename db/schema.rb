@@ -72,6 +72,7 @@ ActiveRecord::Schema.define(version: 20170207214226) do
     t.boolean "is_admin", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "remember_digest"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
@@ -82,5 +83,4 @@ ActiveRecord::Schema.define(version: 20170207214226) do
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_words_on_category_id"
   end
-
 end
