@@ -8,9 +8,10 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
   get "/logout", to: "sessions#destroy"
 
-  resources :users, expect: :destroy
+  resources :users, except: :destroy
   namespace :admin do
-    get "/admin", to: "users#admin"
+    root "users#index"
+    resources :users
   end
   resources :categories, only: [:new, :create, :index]
 end
