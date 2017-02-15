@@ -1,13 +1,20 @@
 en:
   views:
     categories:
+      edit: 
+        edit_category: "Edit Category"
       new: "Create category"
       index: 
         list_category: "List categories"
         start_lesson: "Start lesson"
+        flash_message_delete_category: "This category will be deleted. You sure?"
+        delete_success: "Category deleted!"
+        record_not_find: "Error! Record not be find"
+        edit: "Edit"
+        delete: "Delete"
     shared: 
-      _error_messages:
-        content_error: "The form contains"
+      _error_messages: "Error"
+      content_error: "The form contains"
     layouts:
       header:
         home: "Home"
@@ -51,6 +58,10 @@ en:
     categories_controller:
       create_success: "Create success"
       add_category: "Add Category"
+      flash_update_error: "Update error"
+      flash_update_success: "A category updated!"
+      flash_delete_success: "Delete success"
+
   error:
     user: "Couldn't find this user. Please try again!"
     session: "Invalid email/password combination"

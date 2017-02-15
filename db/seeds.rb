@@ -10,3 +10,6 @@ User.create!(name: "Hoang Thao",
   password: "123456",
   password_confirmation: "123456",
   is_admin: true)
+(1..100).each do |category_id|
+  Category.create(name: "Category #{category_id}")
+end
