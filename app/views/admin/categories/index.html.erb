@@ -1,18 +1,21 @@
-<%= provide :title, t("views.categories.index.list_category") %>
-<h1><%= t "views.categories.index.list_category" %></h1>
+<%= provide :title, t("views.admin.categories.index.list_category") %>
+<h1><%= t "views.admin.categories.index.list_category" %></h1>
 <%= will_paginate @category %>
 <ul class="categories">
   <% @category.each do |category| %>
     <li>
       <h3><%= category.name %><h3>
-      <h5><%= link_to t("views.categories.index.edit"), edit_admin_category_path(category) %></h5>
+      <h5><%= link_to t("views.admin.categories.index.edit"),
+        edit_admin_category_path(category) %></h5>
       <h5>
-        <%= link_to t("views.categories.index.delete"), admin_category_path(category),
-          method: :delete, data:
-          {confirm: t("views.categories.index.flash_message_delete_category")} %>
+        <%= link_to t("views.admin.categories.index.delete"),
+          admin_category_path(category),
+          method: :delete, 
+          data: {confirm:
+            t("views.admin.categories.index.flash_message_delete_category")} %>
       </h5>
       <center>
-        <%= link_to t("views.categories.index.start_lesson"), "#",
+        <%= link_to t("views.admin.categories.index.start_lesson"), "#",
           class: "btn btn-lg btn-primary" %>
       </center>
     </li>

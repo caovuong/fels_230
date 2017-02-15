@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col s5">
+    <div class="card-panel teal">
+      <span class="white-text">
+        <h4>
+          <%= @category.name %>
+        </h4>
+      </span>
+    </div>
+    <div class="card-panel">
+      <div class="login">
+        <%= link_to t("views.admin.categories.show.create_word"),
+          new_admin_category_word_path(@category),
+          class: "btn btn-lg btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>
