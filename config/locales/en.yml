@@ -43,8 +43,10 @@ en:
     save_change: "Save changes" 
     acount: "Welcome to the Framgia E-Learning System! Click on the link 
       below to activate your account:"
+    edit: "Change"
   admin:
     title: "Admin"
+    delete: "You sure?"
   controllers:
     categories_controller:
       create_success: "Create success"
@@ -56,5 +58,6 @@ en:
     update_suc: "Profile updated"
     updated_er: "Update Failed"
     destroy_user: "Deleted User"
+    destroy_err: "Deleted Failed"
   info:
     email: "Please check your email to activate your account."
