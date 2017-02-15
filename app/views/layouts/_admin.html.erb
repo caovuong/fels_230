@@ -5,7 +5,8 @@
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to t("views.layouts.header.home"), admin_root_path %></li>
         <li><%= link_to t("views.layouts.header.user"), admin_users_path %></li>
-        <li><%= link_to t("views.layouts.header.categories"), "#" %></li>
+        <li><%= link_to t("views.layouts.header.categories"),
+          admin_categories_path %></li>
         <li><%= link_to t("views.layouts.header.word_list"), "#" %></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">

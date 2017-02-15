@@ -1,0 +1,25 @@
+<% provide :title, t("lessons.list_categories") %>
+<hr>
+<%= will_paginate @category %>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= t "lessons.name" %></th>
+      <th><%= t "lessons.start_lesson" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @category.each do |category| %>
+      <tr>
+        <td><%= category.name %></td>
+        <td>
+          <%= form_tag lessons_path, method: :post do %>
+            <%= hidden_field_tag "lesson[category_id]", category.id  %>
+            <%= submit_tag t("lessons.start"), class: "btn btn-sm btn-info" %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= will_paginate @category %>
