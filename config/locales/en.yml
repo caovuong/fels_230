@@ -6,6 +6,14 @@ en:
           add_word: "Save"
           content: "Content"
           answer: "Add answer"
+        word:
+          flash_message_delete_word: "This word will be deleted. You sure?"
+        edit:
+          update_word: "Update word"
+          save_change: "Save changes"
+        index:
+          content: "Content"
+          option: "Option"
       categories:
         edit: 
           edit_category: "Edit Category"
@@ -20,6 +28,7 @@ en:
           delete: "Delete"
         show:
           create_word: "Create word"
+          list_word: "List word"
     shared: 
       _error_messages: "Error"
       content_error: "The form contains"
@@ -78,8 +87,13 @@ en:
   controllers:
     admin:
       words_controller:
+        word_not_exit: "Word not exist"
         flash_add_success: "Add word success"
         flash_add_error: "Add word error"
+        flash_update_success: "Update word success"
+        flash_update_failed: "Update word failed"
+        flash_delete_success: "Delete success"
+        flash_delete_failed: "Delete failed"
     categories_controller:
       create_success: "Create success"
       add_category: "Add Category"
