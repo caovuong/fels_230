@@ -54,6 +54,18 @@ en:
   admin:
     title: "Admin"
     delete: "You sure?"
+  lessons:
+    start: "Start"
+    name: "Name"
+    lesson: "Lesson"
+    lesson_list: "All lesson"
+    start_lesson: "Start lesson"
+    list_categories: "All category"
+    err: "Lesson not exist"
+    create_success: "Lesson Created successfully!"
+    create_unsuccess: "Unsuccessfully!"
+  word:
+    word_list: "Word list"
   controllers:
     categories_controller:
       create_success: "Create success"
