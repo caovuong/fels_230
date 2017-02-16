@@ -1,17 +1,25 @@
 en:
   views:
-    categories:
-      edit: 
-        edit_category: "Edit Category"
-      new: "Create category"
-      index: 
-        list_category: "List categories"
-        start_lesson: "Start lesson"
-        flash_message_delete_category: "This category will be deleted. You sure?"
-        delete_success: "Category deleted!"
-        record_not_find: "Error! Record not be find"
-        edit: "Edit"
-        delete: "Delete"
+    admin:
+      words:
+        new: 
+          add_word: "Save"
+          content: "Content"
+          answer: "Add answer"
+      categories:
+        edit: 
+          edit_category: "Edit Category"
+        new: "Create category"
+        index: 
+          list_category: "List categories"
+          start_lesson: "Start lesson"
+          flash_message_delete_category: "This category will be deleted. You sure?"
+          delete_success: "Category deleted!"
+          record_not_find: "Error! Record not be find"
+          edit: "Edit"
+          delete: "Delete"
+        show:
+          create_word: "Create word"
     shared: 
       _error_messages: "Error"
       content_error: "The form contains"
@@ -66,7 +74,12 @@ en:
     create_unsuccess: "Unsuccessfully!"
   word:
     word_list: "Word list"
+
   controllers:
+    admin:
+      words_controller:
+        flash_add_success: "Add word success"
+        flash_add_error: "Add word error"
     categories_controller:
       create_success: "Create success"
       add_category: "Add Category"

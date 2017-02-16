@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :words
   root "pages#show", page: "home"
 
   get "/pages/*page", to: "pages#show"
@@ -11,9 +12,13 @@ Rails.application.routes.draw do
   resources :users, except: :destroy
   resources :lessons, except: [:edit, :update, :destroy]
   resources :categories, only: [:show, :index]
+
   namespace :admin do
     root "users#index"
     resources :users
-    resources :categories
+    resources :categories do
+      resources :words
+    end
+    resources :words
   end
 end
