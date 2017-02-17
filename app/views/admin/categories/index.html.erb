@@ -4,7 +4,7 @@
 <ul class="categories">
   <% @category.each do |category| %>
     <li>
-      <h3><%= category.name %><h3>
+    <h3><%= link_to category.name, admin_category_path(category) %></h3>
       <h5><%= link_to t("views.admin.categories.index.edit"),
         edit_admin_category_path(category) %></h5>
       <h5>
@@ -14,10 +14,6 @@
           data: {confirm:
             t("views.admin.categories.index.flash_message_delete_category")} %>
       </h5>
-      <center>
-        <%= link_to t("views.admin.categories.index.start_lesson"), "#",
-          class: "btn btn-lg btn-primary" %>
-      </center>
     </li>
   <% end %>
 </ul>

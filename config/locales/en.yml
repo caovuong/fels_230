@@ -2,6 +2,8 @@ en:
   views:
     admin:
       words:
+        answer_fields: 
+          remove: "Remove"
         new: 
           add_word: "Save"
           content: "Content"
@@ -43,6 +45,7 @@ en:
         logout: "Log out"
         categories: "Categories"
         word_list: "Wordlist"
+        word: "Word"
       footer:
         about: "About"
         contact: "Contact"
@@ -53,7 +56,13 @@ en:
         content: "This is the home page for the Framgia E-Learning System."
         error_msg: "error"
         create_account: "Create my account"
-
+    words:
+      index:
+        word_list: "Word list"
+        search: "Search words"
+        words: "Words"
+        meaning: "Answer correct"
+        all_word: "all_word"
   helpers:
     application_helper: 
       title: "Framgia E-Learning System"
@@ -119,7 +128,10 @@ en:
       flash_update_error: "Update error"
       flash_update_success: "A category updated!"
       flash_delete_success: "Delete success"
-
+  model:
+    word:
+      no_more_than_one: "no_more_than_one"
+      need_avaliable: "need_avaliable"
   error:
     user: "Couldn't find this user. Please try again!"
     session: "Invalid email/password combination"

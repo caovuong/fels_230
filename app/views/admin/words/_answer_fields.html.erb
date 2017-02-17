@@ -1,0 +1,9 @@
+<div class="answer_word">
+  <%= f.text_field :content, class: "answer_content form-control" %>
+  <%= f.check_box :is_correct, class: "answer_checkbox" %>
+  <%= f.hidden_field :_destroy, value: 0 %>
+  <span class="btn-delete">
+    <%= t "views.admin.words.answer_fields.remove" %> 
+  </span>
+</div>
+<br>

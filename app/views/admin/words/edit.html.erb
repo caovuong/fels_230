@@ -17,9 +17,13 @@
       </div>
       <br>
       <br>
-      <div class="content"></div>
+      <div class="content">
+        <%= f.fields_for :answers do |builder| %>
+          <%= render "answer_fields", f: builder %>
+        <% end %>
+      </div>
       <%= f.submit t("views.admin.words.edit.save_change"), 
-        class: "btn btn-lg btn-primary" %>
+        class: "btn btn-lg btn-primary btn-submit-word" %>
       <br>
       <br>
     <% end %>

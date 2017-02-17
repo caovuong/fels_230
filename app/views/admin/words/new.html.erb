@@ -5,7 +5,7 @@
       <% if @word.category_id %>
         <%= f.hidden_field :category_id, value: @word.category_id %>
       <% else %>
-        <%= f.select "category_id", @list_category %>
+        <%= f.select "category_id", @list_categories %>
       <% end %>
       <div class="input-field col s12">
         <%= f.label :content %>
@@ -19,7 +19,7 @@
       <br>
       <div class="content"></div>
       <%= f.submit t("views.admin.words.new.add_word"), 
-        class: "btn btn-lg btn-primary" %>
+        class: "btn btn-lg btn-primary btn-submit-word" %>
       <br>
       <br>
     <% end %>
