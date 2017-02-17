@@ -43,6 +43,7 @@ en:
         logout: "Log out"
         categories: "Categories"
         word_list: "Wordlist"
+        word: "Word"
       footer:
         about: "About"
         contact: "Contact"
@@ -53,7 +54,12 @@ en:
         content: "This is the home page for the Framgia E-Learning System."
         error_msg: "error"
         create_account: "Create my account"
-
+    words:
+      index:
+        word_list: "Word list"
+        search: "Search words"
+        words: "Words"
+        meaning: "Meaning"
   helpers:
     application_helper: 
       title: "Framgia E-Learning System"
