@@ -10,6 +10,10 @@ class Admin::CategoriesController < ApplicationController
     @category = Category.paginate page: params[:page], per_page: Settings.per_page
   end
   
+  def show
+    @words = @category.words.paginate page: params[:page]
+  end
+
   def create
     @category = Category.new category_params
     if @category.save

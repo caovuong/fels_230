@@ -1,0 +1,14 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th class="th-title" data-field="title">
+        <%= t "views.admin.words.index.content" %></th>
+      <th class="th-option" data-field="option">
+        <%= t "views.admin.words.index.content.option" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @words %>
+  </tbody>
+</table>
+<%= will_paginate @words %>

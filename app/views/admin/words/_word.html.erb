@@ -1,0 +1,20 @@
+<tr>
+  <td>
+    <p class="show-answer"><%= word.content %></p>
+    <ul class="hidden_list_answer choose-success">
+      <% word.answers.each do |answer| %>
+        <li>
+          <%= answer.content %> | <%= answer.is_correct %>
+        </li>
+      <% end %>
+    </ul>
+  </td>
+  <td>
+    <%= link_to t("views.admin.categories.index.delete"), 
+      [:admin, @category, word], method: :delete,
+      data: {confirm: t("views.admin.words.word.flash_message_delete_word")} %>
+    <%= link_to t("views.admin.categories.index.edit"), 
+      edit_admin_category_word_path(@category, word),
+      class: "btn waves-effect waves-light green lighten-1" %>
+  </td>
+</tr>
