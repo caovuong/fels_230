@@ -1,0 +1,19 @@
+<% @user ||= current_user %>
+<div class="stats">
+  <label class="label-auto">
+    <strong id="following" class="stat">
+      <%= @user.following.count %>
+    </strong>
+    <strong>
+      <%= link_to t("shared.following"), "#"%>
+    </strong>
+  </label class="label-auto">
+  <label class="label-auto">
+    <strong id="followers" class="stat">
+      <%= @user.followers.count %>
+    </strong>
+    <strong>
+      <%= link_to t("shared.followers"), "#" %>
+    </strong>
+  </label>
+</div>

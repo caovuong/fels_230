@@ -32,6 +32,11 @@ en:
     shared: 
       _error_messages: "Error"
       content_error: "The form contains"
+    users:
+      follow:
+        bt_follow: "Follow"
+      unfollow:
+        bt_unfollow: "Unfollow"
     layouts:
       header:
         home: "Home"

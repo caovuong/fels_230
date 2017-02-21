@@ -12,7 +12,8 @@ Rails.application.routes.draw do
   resources :users, except: :destroy
   resources :lessons, except: [:edit, :update, :destroy]
   resources :categories, only: [:show, :index]
-
+  resources :relationships, only: [:create, :destroy]
+  
   namespace :admin do
     root "users#index"
     resources :users
@@ -20,5 +21,11 @@ Rails.application.routes.draw do
       resources :words
     end
     resources :words
+  end
+
+  resources :users do
+    member do
+      get :following, :followers
+    end
   end
 end
