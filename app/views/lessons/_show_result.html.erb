@@ -1,0 +1,19 @@
+<% @answers.each.with_index 1 do |answer, index| %>
+  <p><strong><%= index %>. <%= answer.word.content %></strong></p>
+    <% answer.word.answers.each do |_answer| %>
+      <div class="radio_inline">
+      <ol class="
+        list-group-item-<%= _answer.id == answer.id ? "success" : "default" %>">
+        <%= radio_button :answer_id, _answer.id, {},
+          checked: _answer.id == answer.id, disabled: true %>
+        <%= _answer.content %>
+      </ol>
+      </div>
+      <br>
+    <% end %>
+    <% if answer.is_correct? %>
+      <label class="label label-success"><%= t("lessons.correct_a") %></label>
+    <% else %>
+      <label class="label label-danger"><%= t("lessons.wrong") %></label>
+    <% end %>
+<% end %>
