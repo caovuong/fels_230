@@ -3,6 +3,7 @@ class Word < ApplicationRecord
   has_many :answers, dependent: :destroy
   has_many :lessons, through: :results
   belongs_to :category
+  scope :random, -> {order "RANDOM()"}
   accepts_nested_attributes_for :answers,
     reject_if: lambda {|attribute| attribute[:content].blank?}, 
     allow_destroy: true

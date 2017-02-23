@@ -1,0 +1,23 @@
+<%= form_for @lesson do |f| %>
+  <%= f.hidden_field :is_completed, value: true %>
+  <%= f.hidden_field :id, value: @lesson.id %>
+  <%= f.fields_for :results do |builder| %>
+    <div class="form-group">
+      <label><%= builder.index + 1 %>. 
+        <%= builder.object.word.content %></label>
+      <div>
+        <div id="answer">
+          <% builder.object.word.answers.each do |answer| %>
+            <%= builder.radio_button :answer_id, answer.id %>
+            <%= answer.content %>
+            <%= builder.hidden_field :word_id %>
+            <br/>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <div class="col-md-2">
+    <%= f.submit t("lessons.save_lesson"), class: "btn btn-primary btn-lg" %>
+  </div>
+<% end %>

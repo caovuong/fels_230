@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get "/logout", to: "sessions#destroy"
 
   resources :users, except: :destroy
-  resources :lessons, except: [:edit, :update, :destroy]
+  resources :lessons, except: :destroy
   resources :categories, only: [:show, :index]
 
   namespace :admin do

@@ -71,29 +71,48 @@ en:
   admin:
     title: "Admin"
     delete: "You sure?"
+
   lessons:
     start: "Start"
+    finish: "Finish"
+    action: "Action"
+    view: "View"
+    score: "Score"
+    create_lesson: "Create Lesson"
+    list_lesson: "List Of Exams"
+    correct: "Correct :"
+    do_lesson: "Do lessons"
     name: "Name"
+    create_date: "Created Date"
+    exam_date: "Lesson date: "
+    question_number: "Question number"
     lesson: "Lesson"
+    category: "Lesson Category"
+    lesson_score: "Lesson Result :"
+    save_lesson: "Save"
     lesson_list: "All lesson"
     start_lesson: "Start lesson"
     list_categories: "All category"
     err: "Lesson not exist"
     create_success: "Lesson Created successfully!"
     create_unsuccess: "Unsuccessfully!"
+    correct_a: "Correct answer"
+    wrong: "Wrong answer"
+    save: "Your answer was saved!"
+    fail: "Have an error! Try again! "
+    no_word_error: "Category has no word to start lesson"
   word:
     word_list: "Word list"
 
+  words_controller:
+    word_not_exit: "Word not exist"
+    flash_add_success: "Add word success"
+    flash_add_error: "Add word error"
+    flash_update_success: "Update word success"
+    flash_update_failed: "Update word failed"
+    flash_delete_success: "Delete success"
+    flash_delete_failed: "Delete failed"
   controllers:
-    admin:
-      words_controller:
-        word_not_exit: "Word not exist"
-        flash_add_success: "Add word success"
-        flash_add_error: "Add word error"
-        flash_update_success: "Update word success"
-        flash_update_failed: "Update word failed"
-        flash_delete_success: "Delete success"
-        flash_delete_failed: "Delete failed"
     categories_controller:
       create_success: "Create success"
       add_category: "Add Category"
@@ -109,5 +128,6 @@ en:
     updated_er: "Update Failed"
     destroy_user: "Deleted User"
     destroy_err: "Deleted Failed"
+    err: "Error"
   info:
     email: "Please check your email to activate your account."

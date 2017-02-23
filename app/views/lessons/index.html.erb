@@ -1,0 +1,54 @@
+<% provide :title, t("lessons.list_categories") %>
+<div class="container-fluid" id="create">
+  <div class="row">
+    <%= form_for @lesson do |f| %>
+      <%= f.hidden_field :user_id, value: session[:user_id] %>
+    <div class="col-md-3">
+      <div class="form-group">
+        <%= f.select :category_id, @categories, class: "form-control" %>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <%= f.submit t("lessons.create_lesson"), class: "btn btn-primary" %>
+    </div>
+    <% end %>
+  </div>
+</div>
+<hr>
+<h3 id="exam"><%= t"lessons.list_lesson" %></h3>
+<table class="table table-hover">
+  <thead>
+    <tr class="warning">
+      <th><%= t "lessons.create_date" %></th>
+      <th><%= t "lessons.name" %></th>
+      <th><%= t "lessons.question_number" %></th>
+      <th><%= t "lessons.score" %></th>
+      <th><%= t "lessons.action" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @lessons.each do |lesson| %>
+      <tr >
+        <td><%= lesson.created_at.to_date() %></td>
+        <td><%= lesson.category.name %></td>
+        <td><%= lesson.results.count %></td>
+        <td>
+          <% if lesson.is_completed? %>
+            <%= lesson.results.is_corrects.count %>/
+            <%= lesson.results.count %>
+          <% end %>  
+        </td>
+        <td id="action" >
+          <% if lesson.is_completed? %>
+            <%= link_to t("lessons.view"), lesson_path(id: lesson.id),
+              method: :get, class: "btn btn-sm btn-info" %>
+          <% else %>
+            <%= link_to t("lessons.start"), lesson_path(id: lesson.id),
+              method: :get, class: "btn btn-sm btn-info" %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= will_paginate @lessons %>

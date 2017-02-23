@@ -1,14 +1,21 @@
 <% provide :title, t("lessons.lesson") %>
-<h1>
-  <%= t "lessons.lesson" %>
-  <%= @lesson.id %>
-</h1>
 <div class="row">
-  <aside class="col-md-4">
-    <section >
+  <section>
+    <% if @lesson.is_completed? %>
+      <h5><%= t "lessons.exam_date" %> <%= @lesson.created_at.to_date() %>
+      </h5>
+      <h5><%= t "lessons.lesson_score" %><span id="link">
+      <%= @lesson.results.is_corrects.count %>/
+      <%= @lesson.results.count %></span>
+      </h5>
       <h1>
-        <%= @lesson.category.name %>
+        <%= t "lessons.lesson" %>
+        <%= @lesson.id %>
       </h1>
-    </section>
-  </aside>
+      <hr>
+      <%= render "show_result" %>
+    <% else %>
+      <%= render "form" %>
+    <% end %>
+  </section>
 </div>
